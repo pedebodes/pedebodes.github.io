@@ -1,211 +1,918 @@
-<!DOCTYPE HTML>
-<!--
-	Stellar by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Gilberto Oliveira</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<link rel="stylesheet" href="animated-headline/css/reset.css"> <!-- CSS reset -->
-	<link rel="stylesheet" href="animated-headline/css/style.css"> <!-- Resource style -->
-	<script src="animated-headline/js/modernizr.js"></script> <!-- Modernizr -->
-	</head>
-	<body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-<style type="text/css">
-	
-	.info{
-		font-size: 25px !important; 
+    <title>Nome - CV Online</title>
 
-	}
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-</style>
-		<!-- Wrapper -->
-			<div id="wrapper">
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="vendor/devicon/devicon.css" rel="stylesheet">
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+    <link rel="icon" href="img/ico.png">
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<span class="logo"><img src="images/logo.svg" alt="" /></span>
-						<h1>Gilberto Oliveira</h1>
-						
-						<section class="cd-intro info">
-							<span class="cd-headline rotate-1 info">
-								<span>Analista</span>
-								<span class="cd-words-wrapper info">
-									<b class="is-visible">de Sistemas</b>
-									<b>Desenvolvedor</b>
-									<b>de Dados</b>
-								</span>
-							</span>
-						</section> <!-- cd-intro -->
-					
-					</header>
+    <!-- Custom styles for this template -->
+    <link href="css/resume.css" rel="stylesheet">
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul>
-							<li><a href="#intro" class="active">Introduction</a></li>
-							<li><a href="#first">First Section</a></li>
-							<li><a href="#second">Second Section</a></li>
-							<li><a href="#cta">Get Started</a></li>
-						</ul>
-					</nav>
+  </head>
 
-				<!-- Main -->
-					<div id="main">
+  <body id="page-top">
 
-						<!-- Introduction -->
-							<section id="intro" class="main">
-								<div class="spotlight">
-									<div class="content">
-										<header class="major">
-											<h2>Ipsum sed adipiscing</h2>
-										</header>
-										<p>Sed lorem ipsum dolor sit amet nullam consequat feugiat consequat magna
-										adipiscing magna etiam amet veroeros. Lorem ipsum dolor tempus sit cursus.
-										Tempus nisl et nullam lorem ipsum dolor sit amet aliquam.</p>
-										<ul class="actions">
-											<li><a href="generic.html" class="button">Learn More</a></li>
-										</ul>
-									</div>
-									<span class="image"><img src="images/pic01.jpg" alt="" /></span>
-								</div>
-							</section>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">
+        <span class="d-block d-lg-none">CV Online</span>
+        <span class="d-none d-lg-block">
+          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
+        </span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#sobre">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#experiencia">Experiências</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#formacao">Formação</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#habilidades">Habilidades</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#portfolio">Portfólio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#projetos">Projetos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#certificacoes">Certificações</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-						<!-- First Section -->
-							<section id="first" class="main special">
-								<header class="major">
-									<h2>Magna veroeros</h2>
-								</header>
-								<ul class="features">
-									<li>
-										<span class="icon major style1 fa-code"></span>
-										<h3>Ipsum consequat</h3>
-										<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
-									</li>
-									<li>
-										<span class="icon major style3 fa-copy"></span>
-										<h3>Amed sed feugiat</h3>
-										<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
-									</li>
-									<li>
-										<span class="icon major style5 fa-diamond"></span>
-										<h3>Dolor nullam</h3>
-										<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
-									</li>
-								</ul>
-								<footer class="major">
-									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn More</a></li>
-									</ul>
-								</footer>
-							</section>
+    <div class="container-fluid p-0">
 
-						<!-- Second Section -->
-							<section id="second" class="main special">
-								<header class="major">
-									<h2>Ipsum consequat</h2>
-									<p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
-									posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
-								</header>
-								<ul class="statistics">
-									<li class="style1">
-										<span class="icon fa-code-fork"></span>
-										<strong>5,120</strong> Etiam
-									</li>
-									<li class="style2">
-										<span class="icon fa-folder-open-o"></span>
-										<strong>8,192</strong> Magna
-									</li>
-									<li class="style3">
-										<span class="icon fa-signal"></span>
-										<strong>2,048</strong> Tempus
-									</li>
-									<li class="style4">
-										<span class="icon fa-laptop"></span>
-										<strong>4,096</strong> Aliquam
-									</li>
-									<li class="style5">
-										<span class="icon fa-diamond"></span>
-										<strong>1,024</strong> Nullam
-									</li>
-								</ul>
-								<p class="content">Nam elementum nisl et mi a commodo porttitor. Morbi sit amet nisl eu arcu faucibus hendrerit vel a risus. Nam a orci mi, elementum ac arcu sit amet, fermentum pellentesque et purus. Integer maximus varius lorem, sed convallis diam accumsan sed. Etiam porttitor placerat sapien, sed eleifend a enim pulvinar faucibus semper quis ut arcu. Ut non nisl a mollis est efficitur vestibulum. Integer eget purus nec nulla mattis et accumsan ut magna libero. Morbi auctor iaculis porttitor. Sed ut magna ac risus et hendrerit scelerisque. Praesent eleifend lacus in lectus aliquam porta. Cras eu ornare dui curabitur lacinia.</p>
-								<footer class="major">
-									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn More</a></li>
-									</ul>
-								</footer>
-							</section>
+      <section class="resume-section p-3 p-lg-5 d-flex d-column" id="sobre">
+        <div class="my-auto">
+          <h1 class="mb-0">Nome
+            <span class="text-primary">nom2</span>
+          </h1>
+          <div class="subheading mb-5">
+            Local · <span class="text-primary">email@gmail.com
+            </span>
+          </div>
+          <p class="mb-5">Programador PHP Full Stack desde 2015, bacharelando em Sistemas de Informação pela PUC Minas e técnico em informática pelo COTEMIG.<br> Entre meus objetivos na área, destaco a intenção de seguir carreira como desenvolvedor, adquirir experiência com ferramentas Front End e aprimorar conhecimentos já obtidos.
+          </p>
+          <ul class="list-inline list-social-icons mb-0">
+            <li class="list-inline-item">
+              <a href="#">
+                <a class="fa-stack fa-lg" href="https://www.linkedin.com/in/henrique-louzada-38290013a/" target="_blank">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                </a>
+              </a>
+            </li>
+              <a href="#">
+                <a class="fa-stack fa-lg" href="https://github.com/henriquelouz" target="_blank">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </a>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-						<!-- Get Started -->
-							<section id="cta" class="main special">
-								<header class="major">
-									<h2>Congue imperdiet</h2>
-									<p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
-									posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
-								</header>
-								<footer class="major">
-									<ul class="actions">
-										<li><a href="generic.html" class="button special">Get Started</a></li>
-										<li><a href="generic.html" class="button">Learn More</a></li>
-									</ul>
-								</footer>
-							</section>
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experiencia">
+        <div class="my-auto">
+          <h2 class="mb-5">Experiências</h2>
 
-					</div>
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Programador Pleno I</h3>
+              <div class="subheading mb-3">XXXXXXXX</div>
+              <p>Desenvolvimento de ferramentas para backoffice de marketing multinível em PHP. Emissão de relatórios a partir de banco de dados, estatísticas de faturamento, controle de estoque, manutenção de processos automatizados, desenvolvimento de aplicativos mobile.
+              </p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">Fev/17 - Dez/17</span>
+            </div>
+          </div>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<h2>Aliquam sed mauris</h2>
-							<p>Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio.</p>
-							<ul class="actions">
-								<li><a href="generic.html" class="button">Learn More</a></li>
-							</ul>
-						</section>
-						<section>
-							<h2>Etiam feugiat</h2>
-							<dl class="alt">
-								<dt>Address</dt>
-								<dd>1234 Somewhere Road &bull; Nashville, TN 00000 &bull; USA</dd>
-								<dt>Phone</dt>
-								<dd>(000) 000-0000 x 0000</dd>
-								<dt>Email</dt>
-								<dd><a href="#">information@untitled.tld</a></dd>
-							</dl>
-							<ul class="icons">
-								<li><a href="#" class="icon fa-twitter alt"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon fa-facebook alt"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon fa-instagram alt"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon fa-github alt"><span class="label">GitHub</span></a></li>
-								<li><a href="#" class="icon fa-dribbble alt"><span class="label">Dribbble</span></a></li>
-							</ul>
-						</section>
-						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-					</footer>
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Programador Pleno</h3>
+              <div class="subheading mb-3">XXXXXXXXXXXX</div>
+              <p>Manutenção e desenvolvimento de soluções para recortes jurídicos em PHP e C#. Otimização de processamento de texto, entrega sob demanda de layouts de impressão utilizando bibliotecas, desenvolvimento de novas ferramentas para software de edição.</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">Mar/15 - Dez/15</span>
+            </div>
+          </div>
+          <div class="resume-item d-flex flex-column flex-md-row">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Suporte em TI</h3>
+              <div class="subheading mb-3">XXXXXXXXXXX</div>
+              <p>Atendimento ao usuário, manutenção de equipamentos, helpdesk.</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">Dez/14 (Estágio obrigatório)</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
-			</div>
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="formacao">
+        <div class="my-auto">
+          <h2 class="mb-5">Formação</h2>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">PUC Minas</h3>
+              <div class="subheading mb-3">Bacharelado em Sistemas de Informação</div>
+              <div>Algoritmos - C#</div>
+            </div><br>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">2017 - 2017</span>
+            </div>
+          </div>
 
-<script src="animated-headline/js/jquery-2.1.1.js"></script>
-<script src="animated-headline/js/main.js"></script> <!-- Resource jQuery -->
+          <div class="resume-item d-flex flex-column flex-md-row">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">XXXXXXXXXX</h3>
+              <div class="subheading mb-3">Ensino médio técnico</div>
+              <div>Orientação a objetos - C#</div>
+              <div>Técnicas de programação - PHP</div>
+              <div>Banco de dados - MySQL</div>
+              <div>Design de interface</div>
+            </div><br>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">2011 - 2014</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
-	</body>
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="habilidades">
+        <div class="my-auto">
+          <h2 class="mb-5">Habilidades</h2>
+
+          <div class="subheading mb-3">Linguagens &amp; ferramentas</div>
+          <div class="d-none d-lg-block">
+            <div class="row">
+              <div class="col-md-2  bold">
+                <i class="fa fa-pencil-square-o"></i> <span class="label-icons ">Front End</span>
+              </div>
+              <div class="col-md-2">
+                <i class="devicon-html5-plain"></i>  <span class="label-icons">HTML5</span>
+              </div>
+              <div class="col-md-2">
+                <i class="devicon-css3-plain"></i>  <span class="label-icons">CSS3</span>
+              </div>
+              <div class="col-md-2">
+                <i class="devicon-jquery-plain"></i>  <span class="label-icons">JQuery</span>
+              </div>
+              <div class="col-md-2">
+                <i class="devicon-bootstrap-plain"></i> <span class="label-icons">Bootstrap</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2  bold">
+                <i class="devicon-php-plain"></i><span class="label-icons"> PHP</span>
+              </div>
+              <div class="col-md-2">
+                <i class="devicon-zend-plain"></i> <span class="label-icons">Zend</span>
+              </div>  
+              <div class="col-md-2">
+                <i class="devicon-codeigniter-plain"></i> <span class="label-icons">Codeigniter</span>
+              </div>  
+              <div class="col-md-2">
+                <i class="devicon-laravel-plain"></i> <span class="label-icons">Laravel</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2  bold">
+                <i class="devicon-csharp-plain"></i><span class="label-icons"> C#</span>
+              </div>
+              <div class="col-md-2">
+                <i class="devicon-dot-net-plain"></i> <span class="label-icons">.NET</span>
+              </div>
+              <div class="col-md-2">
+                <i class="devicon-visualstudio-plain"></i> <span class="label-icons">Visual Studio</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2  bold">
+                <i class="fa fa-database"></i><span class="label-icons"> DB</span>
+              </div>
+              <div class="col-md-2">
+                <i class="devicon-mysql-plain"></i> <span class="label-icons">MySQL</span>
+              </div>
+              <div class="col-md-2">
+                <i class="devicon-amazonwebservices-plain"></i> <span class="label-icons">DynamoDB</span>
+              </div>
+              <div class="col-md-2">
+                <i class="devicon-windows8-plain"></i> <span class="label-icons">MSSQL</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2  bold">
+                <i class="fa fa-share-alt-square"></i><span class="label-icons"> VCS</span>
+              </div>
+              <div class="col-md-2">
+                <i class="devicon-github-plain"></i> <span class="label-icons">GitHub</span>
+              </div>
+              <div class="col-md-2">
+                <i class="devicon-bitbucket-plain"></i> <span class="label-icons">BitBucket</span>
+              </div>
+              <div class="col-md-2">
+                <i class="devicon-sourcetree-plain"></i> <span class="label-icons">SourceTree</span>
+              </div>
+            </div>
+          </div>
+          <div class="d-block d-lg-none">
+            <div class="row">
+              <div class="col-6 mgb-10">
+                <div class="col-md-2  bold">
+                  <i class="fa fa-pencil-square-o"></i> <span class="label-icons ">Front End</span>
+                </div>
+                <div class="col-md-2">
+                  <i class="devicon-html5-plain"></i>  <span class="label-icons">HTML5</span>
+                </div>
+                <div class="col-md-2">
+                  <i class="devicon-css3-plain"></i>  <span class="label-icons">CSS3</span>
+                </div>
+                <div class="col-md-2">
+                  <i class="devicon-jquery-plain"></i>  <span class="label-icons">JQuery</span>
+                </div>
+                <div class="col-md-2">
+                  <i class="devicon-bootstrap-plain"></i> <span class="label-icons">Bootstrap</span>
+                </div>
+              </div>
+              <div class="col-6 mgb-10">
+                <div class="col-md-2  bold">
+                  <i class="devicon-php-plain"></i><span class="label-icons"> PHP</span>
+                </div>
+                <div class="col-md-2">
+                  <i class="devicon-zend-plain"></i> <span class="label-icons">Zend</span>
+                </div>  
+                <div class="col-md-2">
+                  <i class="devicon-codeigniter-plain"></i> <span class="label-icons">Codeigniter</span>
+                </div>  
+                <div class="col-md-2">
+                  <i class="devicon-laravel-plain"></i> <span class="label-icons">Laravel</span>
+                </div>
+              </div>
+              <div class="col-6 mgb-10">
+                <div class="col-md-2  bold">
+                  <i class="devicon-csharp-plain"></i><span class="label-icons"> C#</span>
+                </div>
+                <div class="col-md-2">
+                  <i class="devicon-dot-net-plain"></i> <span class="label-icons">.NET</span>
+                </div>
+                <div class="col-md-2">
+                  <i class="devicon-visualstudio-plain"></i> <span class="label-icons">Visual Studio</span>
+                </div>
+              </div>
+              <div class="col-6 mgb-10">
+                <div class="col-md-2  bold">
+                  <i class="fa fa-database"></i><span class="label-icons"> DB</span>
+                </div>
+                <div class="col-md-2">
+                  <i class="devicon-mysql-plain"></i> <span class="label-icons">MySQL</span>
+                </div>
+                <div class="col-md-2">
+                  <i class="devicon-amazonwebservices-plain"></i> <span class="label-icons">DynamoDB</span>
+                </div>
+                <div class="col-md-2">
+                  <i class="devicon-windows8-plain"></i> <span class="label-icons">MSSQL</span>
+                </div>
+              </div>
+              <div class="col-6 mgb-10">
+                <div class="col-md-2  bold">
+                  <i class="fa fa-share-alt-square"></i><span class="label-icons"> VCS</span>
+                </div>
+                <div class="col-md-2">
+                  <i class="devicon-github-plain"></i> <span class="label-icons">GitHub</span>
+                </div>
+                <div class="col-md-2">
+                  <i class="devicon-bitbucket-plain"></i> <span class="label-icons">BitBucket</span>
+                </div>
+                <div class="col-md-2">
+                  <i class="devicon-sourcetree-plain"></i> <span class="label-icons">SourceTree</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="subheading mb-3">Workflow</div>
+          <ul class="fa-ul mb-0">
+            <li>
+              <i class="fa-li fa fa-check"></i>
+              Design responsivo, requisições AJAX
+            </li>
+            <li>
+              <i class="fa-li fa fa-check"></i>
+              Orientação a objeto, MVC
+            </li>
+            <li>
+              <i class="fa-li fa fa-check"></i>
+              Diagrama de requisitos UML
+            </li>
+            <li>
+              <i class="fa-li fa fa-check"></i>
+              Scrum, XP, ITIL
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="portfolio">
+        <div class="my-auto">
+          <h2 class="mb-5">Portfólio</h2>
+          <div class="row">
+            <div class="col-md-4 col-sm-6 portfolio-item">
+              <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+                <div class="portfolio-hover">
+                  <div class="portfolio-hover-content">
+                    <i class="fa fa-plus fa-3x"></i>
+                  </div>
+                </div>
+                <img class="img-fluid portimage" src="img/portfolio/login/login.jpg" alt="">
+              </a>
+              <div class="portfolio-caption">
+                <h3>Login</h3>
+                <p class="text-muted">Tela de login com log de acesso</p>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 portfolio-item">
+              <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+                <div class="portfolio-hover">
+                  <div class="portfolio-hover-content">
+                    <i class="fa fa-plus fa-3x"></i>
+                  </div>
+                </div>
+                <img class="img-fluid portimage" src="img/portfolio/chatbot/chatbot.jpg" alt="">
+              </a>
+              <div class="portfolio-caption">
+                <h3>ChatBot</h3>
+                <p class="text-muted">Ferramenta de chat com bot de atendimento</p>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 portfolio-item">
+              <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+                <div class="portfolio-hover">
+                  <div class="portfolio-hover-content">
+                    <i class="fa fa-plus fa-3x"></i>
+                  </div>
+                </div>
+                <img class="img-fluid portimage" src="img/portfolio/bomdeservico/bomdeservico.jpg" alt="">
+              </a>
+              <div class="portfolio-caption">
+                <h3>Bom de serviço</h3>
+                <p class="text-muted">Sistema de busca de prestadores de serviço</p>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 portfolio-item">
+              <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+                <div class="portfolio-hover">
+                  <div class="portfolio-hover-content">
+                    <i class="fa fa-plus fa-3x"></i>
+                  </div>
+                </div>
+                <img class="img-fluid portimage" src="img/portfolio/foodfinder/foodfinder.jpg" alt="">
+              </a>
+              <div class="portfolio-caption">
+                <h3>Food Finder</h3>
+                <p class="text-muted">Sistema de busca e reserva de mesas</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="projetos">
+        <div class="my-auto d-none d-lg-block">
+          <h2 class="mb-5">Projetos</h2>
+            <div class="row">
+              <div class="col-md-2 ta-right">
+                <span class="text-primary">Food Finder</span> 
+              </div>
+              <div class="col-md-3">
+                PHP/MySQL (mobile)
+              </div>
+              <div class="col-md-7">
+                Busca e reserva de mesas em restaurantes cadastrados
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2 ta-right">
+                <span class="text-primary">Colora</span> 
+              </div>
+              <div class="col-md-3">
+                C# 
+              </div>
+              <div class="col-md-7">
+                Pesonalização de componentes automotivos
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2 ta-right">
+                <span class="text-primary">V-SAP web</span> 
+              </div>
+              <div class="col-md-3">
+                PHP CodeIgniter/MSSQL 
+              </div>
+              <div class="col-md-7">
+                Migração de sistema em Delphi para PHP
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2 ta-right">
+                <span class="text-primary">V-Correção</span> 
+              </div>
+              <div class="col-md-3">
+                C# 
+              </div>
+              <div class="col-md-7">
+                Editor de texto padronizado para recorte jurídico
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2 ta-right">
+                <span class="text-primary">V-WS</span> 
+              </div>
+              <div class="col-md-3">
+                PHP
+              </div>
+              <div class="col-md-7">
+                WebService SOAP para disponibilização de recortes jurídicos em array
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2 ta-right">
+                <span class="text-primary">Bom de Serviço</span> 
+              </div>
+              <div class="col-md-3">
+                PHP/MySQL 
+              </div>
+              <div class="col-md-7">
+                Busca e avaliação de prestadores de serviço por proximidade
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2 ta-right">
+                <span class="text-primary">AK MMN</span> 
+              </div>
+              <div class="col-md-3">
+                PHP Zend/MySQL 
+              </div>
+              <div class="col-md-7">
+                BackOffice para investidores vinculados
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2 ta-right">
+                <span class="text-primary">AK Franquias</span> 
+              </div>
+              <div class="col-md-3">
+                PHP Zend/MySQL 
+              </div>
+              <div class="col-md-7">
+                BackOffice para franquias vinculadas
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2 ta-right">
+                <span class="text-primary">Agharta</span> 
+              </div>
+              <div class="col-md-3">
+                PHP Zend/DynamoDB 
+              </div>
+              <div class="col-md-7">
+                Gerenciador de processos automatizados 
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2 ta-right">
+                <span class="text-primary">impAKt APP</span> 
+              </div>
+              <div class="col-md-3">
+                PHP Laravel/MySQL (mobile)
+              </div>
+              <div class="col-md-7">
+                Aplicativo para gerenciamento de Health Training
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2 ta-right">
+                <span class="text-primary">AK API</span> 
+              </div>
+              <div class="col-md-3">
+                PHP Laravel/MySQL
+              </div>
+              <div class="col-md-7">
+                Migração de sistema legado para API RESTful
+              </div>
+            </div>
+        </div>
+
+        <div class="my-auto d-lg-none">
+          <h2 class="mb-5">Projetos</h2>
+            <div class="row">
+              <div class="col-6">
+                <span class="text-primary bold">Food Finder</span> 
+              </div>
+              <div class="col-6 ta-right">
+                PHP/MySQL (mobile)
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                Busca e reserva de mesas em restaurantes cadastrados
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-6">
+                <span class="text-primary bold">Colora</span> 
+              </div>
+              <div class="col-6 ta-right">
+                C# 
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                Personalização de componentes automotivos
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-4">
+                <span class="text-primary bold">V-SAP web</span> 
+              </div>
+              <div class="col-8 ta-right">
+                PHP CodeIgniter/MSSQL 
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                Migração de sistema em Delphi para PHP
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-6">
+                <span class="text-primary bold">V-Correção</span> 
+              </div>
+              <div class="col-6 ta-right">
+                C# 
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                Editor de texto padronizado para recorte jurídico
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-6">
+                <span class="text-primary bold">V-WS</span> 
+              </div>
+              <div class="col-6 ta-right">
+                PHP SOAP
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                WebService SOAP para disponibilização de recortes jurídicos em array
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-6">
+                <span class="text-primary bold">Bom de Serviço</span> 
+              </div>
+              <div class="col-6 ta-right">
+                PHP/MySQL 
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                Busca e avaliação de prestadores de serviço por proximidade
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-4">
+                <span class="text-primary bold">AK MMN</span> 
+              </div>
+              <div class="col-8 ta-right">
+                PHP Zend/MySQL 
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                BackOffice para investidores vinculados
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-4">
+                <span class="text-primary bold">AK Franquias</span> 
+              </div>
+              <div class="col-8 ta-right">
+                PHP Zend/MySQL 
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                BackOffice para franquias vinculadas
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-4">
+                <span class="text-primary bold">Agharta</span> 
+              </div>
+              <div class="col-8 ta-right">
+                PHP Zend/DynamoDB 
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                Gerenciador de processos automatizados 
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-4">
+                <span class="text-primary bold">impAKt APP</span> 
+              </div>
+              <div class="col-8 ta-right">
+                PHP Laravel/MySQL (mobile)
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                Aplicativo para gerenciamento de Health Training
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-4">
+                <span class="text-primary bold">AK API</span> 
+              </div>
+              <div class="col-8 ta-right">
+                PHP Laravel/MySQL
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                Migração de sistema legado para API RESTful
+              </div>
+            </div>
+            <br>
+        </div>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="certificacoes">
+        <div class="my-auto">
+          <h2 class="mb-5">Certificações &amp; eventos</h2>
+           <ul class="fa-ul mb-0">
+            <li>
+              <i class="fa fa-bank"></i>
+              PHP Conference Brasil 2017 - Dez/17
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+   <!-- Modal Login -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg" >
+        <div class="modal-content">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Login</h2>
+                  <p class="item-intro text-muted">Sistema de login com controle de acesso.</p>
+
+                  <div id="carousel1Controls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <center>
+                          <img class=" fixed d-block" src="img/portfolio/login/login1.jpg" alt="First slide">
+                        </center>
+                      </div>
+                      <div class="carousel-item">
+                        <center>
+                          <img class=" fixed d-block" src="img/portfolio/login/login2.jpg" alt="Second slide">
+                        </center>
+                      </div>
+                      <div class="carousel-item">
+                        <center>
+                          <img class=" fixed d-block" src="img/portfolio/login/login3.jpg" alt="Third slide">
+                        </center>
+                      </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carousel1Controls" role="button" data-slide="prev">
+                      <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a class="carousel-control-next" href="#carousel1Controls" role="button" data-slide="next">
+                      <i class="fa fa-angle-right"></i>
+                    </a>
+                  </div>
+
+                  <p>Pequeno sistema para entrevista de emprego, se trata de uma tela de login com validações AJAX e encriptação de senha. Feito utilizando o padrão MVC e Bootstrap, este sistema é um resumo de todo meu conhecimento adquirido até então.</p>
+                  <ul class="list-inline">
+                    <li>Feito em: 2017</li>
+                    <li>Tecnologias: PHP MVC, Bootstrap, AJAX, PDO</li>
+                  </ul>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fa fa-times"></i>
+                    Fechar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Modal Login -->
+
+
+    <!-- Modal ChatBot -->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg" >
+        <div class="modal-content">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">ChatBot</h2>
+                  <p class="item-intro text-muted">Bot alimentado por banco de dados para interação com usuário</p>
+                  <img class="img-fluid d-block mx-auto" src="img/portfolio/chatbot/chatbot.jpg" alt="">
+                  <p>Este projeto foi desenvolvido utilizando a inteligência artificial da api <a href="https://www.pandorabots.com/">pandorabots.com</a> com a finalidade de disponibilizar uma central de conhecimento sobre a empresa com o diferencial da interatividade do usuário.</p>
+                  <ul class="list-inline">
+                    <li>Feito em: 2017</li>
+                    <li>Tecnologias: Bootstrap, JQuery, API Pandorabots, AIML</li>
+                  </ul>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fa fa-times"></i>
+                    Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Modal ChatBot -->
+
+  
+
+    <!-- Modal FoodFinder -->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg" >
+        <div class="modal-content">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Bom de serviço</h2>
+                  <p class="item-intro text-muted">Rede de divulgação e avaliação de prestadores de serviço.</p>
+
+                  <div id="carousel2Controls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <center>
+                          <img class=" fixed d-block" src="img/portfolio/bomdeservico/bomdeservico1.jpg" alt="First slide">
+                        </center>
+                      </div>
+                      <div class="carousel-item">
+                        <center>
+                          <img class=" fixed d-block" src="img/portfolio/bomdeservico/bomdeservico2.jpg" alt="Second slide">
+                        </center>
+                      </div>
+                      <div class="carousel-item">
+                        <center>
+                          <img class=" fixed d-block" src="img/portfolio/bomdeservico/bomdeservico3.jpg" alt="Third slide">
+                        </center>
+                      </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carousel2Controls" role="button" data-slide="prev">
+                      <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a class="carousel-control-next" href="#carousel2Controls" role="button" data-slide="next">
+                      <i class="fa fa-angle-right"></i>
+                    </a>
+                  </div>
+
+                  <p>Projeto para startup. Consiste em um sistema web de pesquisa de profissionais de serviços gerais para divulgação baseado em proximidade. Prometia destacar anúncios com melhores médias de avaliação.</p>
+                  <ul class="list-inline">
+                    <li>Feito em: 2015</li>
+                    <li>Tecnologias: PHP, Bootstrap, AJAX, API Maps</li>
+                  </ul>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fa fa-times"></i>
+                    Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Modal FoodFinder -->
+
+    <!-- Modal FoodFinder -->
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg" >
+        <div class="modal-content">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Food Finder</h2>
+                  <p class="item-intro text-muted">Sistema web para busca e reserva de mesas em restaurantes cadastrados.</p>
+
+                  <div id="carousel3Controls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <center>
+                          <img class=" fixed d-block" src="img/portfolio/foodfinder/foodfinder1.jpg" alt="First slide">
+                        </center>
+                      </div>
+                      <div class="carousel-item">
+                        <center>
+                          <img class=" fixed d-block" src="img/portfolio/foodfinder/foodfinder2.jpg" alt="Second slide">
+                        </center>
+                      </div>
+                      <div class="carousel-item">
+                        <center>
+                          <img class=" fixed d-block" src="img/portfolio/foodfinder/foodfinder3.jpg" alt="Third slide">
+                        </center>
+                      </div>
+                      <div class="carousel-item">
+                        <center>
+                          <img class=" fixed d-block" src="img/portfolio/foodfinder/foodfinder4.jpg" alt="Fourth slide">
+                        </center>
+                      </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carousel3Controls" role="button" data-slide="prev">
+                      <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a class="carousel-control-next" href="#carousel3Controls" role="button" data-slide="next">
+                      <i class="fa fa-angle-right"></i>
+                    </a>
+                  </div>
+
+                  <p>Feito como Projeto de Conclusão de Curso para o técnico, este foi o primeiro projeto de minha autoria. Consiste em uma plataforma onde restaurantes e pessoas interessadas em reservar suas mesas podem se conectar de uma maneira rápida e intuitiva.</p>
+                  <ul class="list-inline">
+                    <li>Feito em: 2014</li>
+                    <li>Tecnologias: PHP, Bootstrap</li>
+                  </ul>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fa fa-times"></i>
+                    Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Modal FoodFinder -->  
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/resume.min.js"></script>
+  </body>
 </html>
-
