@@ -24,6 +24,36 @@
 
     </div>
 
+
+<script>
+function zapzap(){
+
+    var telefone = $("#tel").val()
+    var url = 'https://web.whatsapp.com/send?phone=55'+telefone
+    console.log('aqui'+telefone+url)
+
+    
+    window.open(
+        url,
+        '_blank' // <- This is what makes it open in a new window.
+    );
+}
+
+
+
+function onlynumber(evt) {
+   var theEvent = evt || window.event;
+   var key = theEvent.keyCode || theEvent.which;
+   key = String.fromCharCode( key );
+   //var regex = /^[0-9.,]+$/;
+   var regex = /^[0-9.]+$/;
+   if( !regex.test(key) ) {
+      theEvent.returnValue = false;
+      if(theEvent.preventDefault) theEvent.preventDefault();
+   }
+}
+</script>
+
 <div class="jumbotron jumbotron-fluid">
     <h1 class="display-4" align="center">Em Construção</h1>
     
@@ -31,8 +61,24 @@
 <div class="container">
     <div class="row">
         <div class="col-sm">
-            <img src="https://78.media.tumblr.com/29fd0ed1b72c47d181809be169384699/tumblr_ozsa72qaSJ1toamj8o1_500.gif"
+            <img src="https://static.facebook.com/images/whatsapp/www/whatsapp-promo.png"
             alt="" width="300" height="300">
+
+            Telefone: <input type="text" id="tel" onkeypress="return onlynumber();" placeholder="ddd+telefone sem separador">
+            
+            <button type="button" class="btn btn-success" onclick="zapzap()">Enviar ZAP</button>
+            
+
+                <!-- <a href="https://web.whatsapp.com/send?phone=5531981089903&amp;text=Acesso via site. Olá tenho uma dúvida, você pode me ajudar?" target="_blank" class="wptwa-account" data-number="5531981089903" data-auto-text="Acesso via site. Olá tenho uma dúvida, você pode me ajudar?">
+                    <div class="wptwa-face"><img src="https://onlinegamecell.com.br/wp-content/uploads/2021/07/cropped-Logo-300x300.jpg" onerror="this.style.display='none'"></div>
+                    <div class="wptwa-info">
+                        <span class="wptwa-title">Online GameCell</span>								
+                        <span class="wptwa-name">Vendas</span>
+                    </div>
+                    <div class="wptwa-clearfix"></div>
+				</a> -->
+
+
         </div>
         <div class="col-sm">
             
