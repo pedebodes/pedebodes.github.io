@@ -34,8 +34,13 @@ function lista(){
                     sistemas += y.tipo + '<br>' 
                 });
 
+                
+                
                 if (carro){
-                    if (v.nome.toLowerCase() == carro){
+                    //console.log('>>>',v.nome.includes('Vectra'))
+                    nm =v.nome.toLowerCase()
+                    if (nm.includes(carro)){
+                    //if (v.nome.toLowerCase() == carro){
                         $('#dados tbody').append(
                             '<tr>'+
                                 '<td>'+v.montadora+'</td>'+
@@ -116,6 +121,9 @@ tbody tr {
 </style>
 
 
+<div class="container">
+
+
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
     <h1 class="display-4">Lista de Veiculos e suas respectivas injeções</h1>
@@ -146,5 +154,6 @@ tbody tr {
             </tbody>
         </table>
         <span id="falha"></span>
+        </div>
     </body>
 </html>
