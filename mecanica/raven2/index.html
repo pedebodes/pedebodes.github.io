@@ -1,77 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de veiculos</title>
-</head>
-<body>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
-    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    
-    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lista de veiculos</title>
+    </head>
+    <body>
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+            integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+            crossorigin="anonymous">
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+            integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+            crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script>
 
+function lista(){
+    var carro = $("#busca").val().toLowerCase();
+      if (carro){
+ $('#dados tbody').empty();
+      }
+    $.getJSON("data.json", function(data){
+        $.each(data, function(key, value) {
+            $.each(value, function(k, v) {
+                $.each(v.injecoes, function(x,y) {
+                    aux = y.nome + '<br>'+ y.link
+                });
+                var sistemas = ''
+                $.each(v.sistemas, function(x,y) {
+                    sistemas += y.tipo + '<br>' 
+                });
 
-<script>
-
-
-$.getJSON("data.json", function(data){
-$.each(data, function(key, value) {
-    $.each(value, function(k, v) {
-
-        $.each(v.injecoes, function(x,y) {
-            aux = y.nome + '<br>'+ y.link
+                if (carro){
+                    if (v.nome.toLowerCase() == carro){
+                        $('#dados tbody').append(
+                            '<tr>'+
+                                '<td>'+v.montadora+'</td>'+
+                                '<td>'+v.nome+'</td>'+
+                                '<td>'+v.nomeGenerico+'</td>'+
+                                '<td>'+v.motor+'</td>'+
+                                '<td>'+v.ano+'</td>'+
+                                '<td>'+v.injecao+'</td>'+
+                                '<td>'+aux.toUpperCase()+'</td>'+
+                                
+                                '<td>'+sistemas+'</td>'+
+                            '</tr>'
+                            );                  
+                    }else{
+                        $("#falha").text("veiculo nao encontrado")
+                    }
+                }else{
+                    $('#dados tbody').append(
+                        '<tr>'+
+                            '<td>'+v.montadora+'</td>'+
+                            '<td>'+v.nome+'</td>'+
+                            '<td>'+v.nomeGenerico+'</td>'+
+                            '<td>'+v.motor+'</td>'+
+                            '<td>'+v.ano+'</td>'+
+                            '<td>'+v.injecao+'</td>'+
+                            '<td>'+aux.toUpperCase()+'</td>'+
+                            
+                            '<td>'+sistemas+'</td>'+
+                        '</tr>'
+                     );
+                }
+            });
         });
-        var sistemas = ''
-        $.each(v.sistemas, function(x,y) {
-            sistemas += y.tipo + '<br>' 
-        });
-      
-
-        $('#dados tbody').append(
-        '<tr>'+
-            '<td>'+v.montadora+'</td>'+
-            '<td>'+v.nome+'</td>'+
-            '<td>'+v.nomeGenerico+'</td>'+
-            '<td>'+v.motor+'</td>'+
-            '<td>'+v.ano+'</td>'+
-            '<td>'+v.injecao+'</td>'+
-            '<td>'+aux+'</td>'+
-            
-            '<td>'+sistemas+'</td>'+
-        '</tr>'
-        
-        );
     });
-});
+}
 
-});
+$(document).ready(function(){ 
+   lista()
+})
 
-
-
-
-
-</script>    
-
-
-<table  id="dados"class="table table-bordered table-hover">
-	<thead class="table-dark">
-	<tr>
-		<th>montadora</th>
-		<th>nome</th>
-		<th>nomeGenerico</th>
-		<th>motor</th>
-		<th>ano</th>
-		<th>injecao</th>
-		<th>injecoes</th>		
-		<th>sistemas</th>
-	</tr>
-	</thead>
-	<tbody>
-	</tbody>
-</table>
-
-</body>
+function atualiza(){
+    document.location.reload();
+}
+</script>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Lista de Veiculos e suas respectivas injeções</h1>
+  </div>
+</div>
+<div class="input-group">
+  <input type="text" class="form-control" aria-label="Informe o nome do veiculo" aria-describedby="basic-addon2" id="busca" placeholder="Informe o nome do veiculo">
+  <div class="input-group-append">
+    <button class="btn btn-danger" type="button" onclick="lista()">Buscar</button>
+    <button class="btn btn-success" type="button" onclick="atualiza()">Atualizar</button>
+  </div>
+</div>
+        <br>
+        <table id="dados" class="table table-bordered table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>montadora</th>
+                    <th>nome</th>
+                    <th>nomeGenerico</th>
+                    <th>motor</th>
+                    <th>ano</th>
+                    <th>injecao</th>
+                    <th>injecoes</th>
+                    <th>sistemas</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <span id="falha"></span>
+    </body>
 </html>
