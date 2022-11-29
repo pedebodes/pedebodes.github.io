@@ -15,7 +15,8 @@
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
             integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
             crossorigin="anonymous"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script>
 
 function lista(){
@@ -34,13 +35,9 @@ function lista(){
                     sistemas += y.tipo + '<br>' 
                 });
 
-                
-                
                 if (carro){
-                    //console.log('>>>',v.nome.includes('Vectra'))
                     nm =v.nome.toLowerCase()
                     if (nm.includes(carro)){
-                    //if (v.nome.toLowerCase() == carro){
                         $('#dados tbody').append(
                             '<tr>'+
                                 '<td>'+v.montadora+'</td>'+
@@ -86,7 +83,7 @@ function atualiza(){
 }
 </script>
 
-<style>
+        <style>
     body{
   background-color: #bdc3c7;
 }
@@ -121,39 +118,44 @@ tbody tr {
 </style>
 
 
-<div class="container">
-
-
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4">Lista de Veiculos e suas respectivas injeções</h1>
-  </div>
-</div>
-<div class="input-group">
-  <input type="text" class="form-control" aria-label="Informe o nome do veiculo" aria-describedby="basic-addon2" id="busca" placeholder="Informe o nome do veiculo">
-  <div class="input-group-append">
-    <button class="btn btn-danger" type="button" onclick="lista()">Buscar</button>
-    <button class="btn btn-success" type="button" onclick="atualiza()">Atualizar</button>
-  </div>
-</div>
-        <br>
-        <table id="dados" class="table table-bordered table-hover table-fixed">
-            <thead class="table-dark">
-                <tr>
-                    <th>montadora</th>
-                    <th>nome</th>
-                    <th>nomeGenerico</th>
-                    <th>motor</th>
-                    <th>ano</th>
-                    <th>injecao</th>
-                    <th>injecoes</th>
-                    <th>sistemas</th>
-                </tr>
-            </thead>
-            <tbody>
-            </tbody>
-        </table>
-        <span id="falha"></span>
+        <div class="container">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1 class="display-4">Lista de Veiculos e suas respectivas
+                        injeções</h1>
+                </div>
+            </div>
+            <div class="input-group">
+                <input type="text" class="form-control" aria-label="Informe o
+                    nome do veiculo" aria-describedby="basic-addon2" id="busca"
+                    placeholder="Informe o nome do veiculo">
+                <div class="input-group-append">
+                    <button class="btn btn-danger" type="button"
+                        onclick="lista()">Buscar</button>
+                    <button class="btn btn-success" type="button"
+                        onclick="atualiza()">Atualizar</button>
+                </div>
+            </div>
+            <br>
+            <table id="dados" class="table table-bordered table-hover
+                table-fixed">
+                <thead class="table-dark">
+                    <tr>
+                        <th>montadora</th>
+                        <th>nome</th>
+                        <th>nomeGenerico</th>
+                        <th>motor</th>
+                        <th>ano</th>
+                        <th>injecao</th>
+                        <th>injecoes</th>
+                        <th>sistemas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <span id="falha"></span>
         </div>
+        
     </body>
 </html>
