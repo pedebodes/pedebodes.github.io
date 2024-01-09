@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Substituição de Query</title>
+    <!-- Inclua os links para os estilos do Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h2 class="text-center mb-4">Substituição de Query</h2>
+
+                <!-- Input para a Query -->
+                <div class="form-group">
+                    <label for="queryInput">Query:</label>
+                    <textarea class="form-control" id="queryInput" rows="5"
+                        placeholder="Insira a query aqui..."></textarea>
+                </div>
+
+                <!-- Input para o JSON -->
+                <div class="form-group">
+                    <label for="jsonInput">JSON:</label>
+                    <textarea class="form-control" id="jsonInput" rows="3"
+                        placeholder="Insira o JSON aqui..."></textarea>
+                </div>
+
+                <!-- Botão para Substituir -->
+                <button class="btn btn-primary btn-block" onclick="substituirQuery()">Substituir</button>
+
+                <!-- Resultado da Substituição -->
+                <div class="mt-3">
+                    <label for="resultadoQuery">Resultado:</label>
+                    <textarea class="form-control" id="resultadoQuery" rows="5" readonly></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Inclua os scripts do Bootstrap e seu script JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script>
+        function substituirQuery() {
+            // Obtenha os valores dos inputs
+            let query = document.getElementById('queryInput').value;
+            let jsonStr = document.getElementById('jsonInput').value;
+
+            // Trate ambas as formas de representação do JSON (com aspas simples ou duplas)
+            jsonStr = jsonStr.replace(/'/g, '"');
+
+            // Parse do JSON
+            let json;
+            try {
+                json = JSON.parse(jsonStr);
+            } catch (error) {
+                alert('Erro ao analisar o JSON. Certifique-se de inserir um JSON válido.');
+                return;
+            }
+
+            // Substitua os marcadores de posição na query pelo JSON
+            let querySubstituida = substituirMarcadores(query, json);
+
+            // Atualize o resultado da substituição
+            document.getElementById('resultadoQuery').value = querySubstituida;
+        }
+
+        function substituirMarcadores(query, json) {
+            return query.replace(/%\((\w+)\)s/g, (match, chave) => {
+                return json[chave] !== undefined ? json[chave] : match;
+            });
+        }
+    </script>
+
+</body>
+
+</html>
