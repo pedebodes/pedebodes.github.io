@@ -53,8 +53,8 @@
             let query = document.getElementById('queryInput').value;
             let jsonStr = document.getElementById('jsonInput').value;
 
-            // Trate ambas as formas de representação do JSON (com aspas simples ou duplas)
-            jsonStr = jsonStr.replace(/'/g, '"');
+            // Remova o prefixo u' e substitua aspas simples por aspas duplas
+            jsonStr = jsonStr.replace(/u'/g, '"').replace(/'/g, '"');
 
             // Parse do JSON
             let json;
@@ -74,7 +74,11 @@
 
         function substituirMarcadores(query, json) {
             return query.replace(/%\((\w+)\)s/g, (match, chave) => {
-                return json[chave] !== undefined ? json[chave] : match;
+                if (json[chave] !== undefined) {
+                    // Se o valor for uma string, adicione aspas simples ao redor
+                    return typeof json[chave] === 'string' ? `'${json[chave]}'` : json[chave];
+                }
+                return match;
             });
         }
     </script>
