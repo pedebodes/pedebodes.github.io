@@ -56,6 +56,9 @@
             // Remova o prefixo u' e substitua aspas simples por aspas duplas
             jsonStr = jsonStr.replace(/u'/g, '"').replace(/'/g, '"');
 
+            // Converta objetos datetime.date para strings no formato YYYY-MM-DD
+            jsonStr = jsonStr.replace(/datetime\.date\((\d+),\s*(\d+),\s*(\d+)\)/g, '"$1-$2-$3"');
+
             // Parse do JSON
             let json;
             try {
@@ -76,7 +79,11 @@
             return query.replace(/%\((\w+)\)s/g, (match, chave) => {
                 if (json[chave] !== undefined) {
                     // Se o valor for uma string, adicione aspas simples ao redor
-                    return typeof json[chave] === 'string' ? `'${json[chave]}'` : json[chave];
+                    if (typeof json[chave] === 'string') {
+                        return `'${json[chave]}'`;
+                    }
+                    // Para outros tipos, retorne o valor diretamente
+                    return json[chave];
                 }
                 return match;
             });
